@@ -1,0 +1,12 @@
+{
+    "id":"41d32-81bb1-65209-f1764-0ac6e",
+    "cycle":"2401",
+    "cycle_display":"2401",
+    "cycle_parse": 2401,
+    "enroute_available":"2401",
+    "update_info":"",
+    "charts_available":["jeppesen","aip"],
+    "critical":[],
+    "effective": "2024年1月25日",
+    "expire":"2024年2月21日"
+}
