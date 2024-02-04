@@ -4,11 +4,11 @@
     "beforeBuildCommand": "",
     "beforeDevCommand": "npm run dev",
     "devPath": "http://efb.flyskyline.gov.cn:81",
-    "distDir": "https://food.scau.starjin.top/",
+    "distDir": "https://efb.skylineflyleague.cn",
     "withGlobalTauri": true
   },
   "package": {
-    "productName": "scau-food",
+    "productName": "skyline-efb-v7",
     "version": "0.1.0"
   },
   "tauri": {
@@ -77,7 +77,7 @@
       "icon": [
         "icons/icon.ico"
       ],
-      "identifier": "SCAU-Food",
+      "identifier": "SKYline-EFB-V7-Data",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
@@ -106,7 +106,7 @@
         "fullscreen": false,
         "height": 1080,
         "resizable": true,
-        "title": "食品学院通讯录管理系统电脑版",
+        "title": "SKYline EFB V7 Desktop",
         "width": 1650
       }
     ]
