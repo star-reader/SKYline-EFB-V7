@@ -1,0 +1,445 @@
+// 左侧导航栏行为
+.nav-left div[aria-details = 'active'] path{
+    stroke: #87CEFA !important;
+}
+.nav-left div[aria-details = 'active'] circle{
+    stroke: #87CEFA !important;
+}
+.nav-left div[aria-details = 'active'] rect{
+    stroke: #87CEFA !important;
+}
+.nav-left div[aria-details = 'inactive'] path{
+    stroke: white !important;
+}
+.nav-left div[aria-details = 'inactive'] circle{
+    stroke: white !important;
+}
+.nav-left div[aria-details = 'inactive'] rect{
+    stroke: white !important;
+}
+.nav-left div[aria-details = 'active'] {
+    background-color: rgb(14, 28, 54);
+}
+
+/* 手机版 */
+@media (max-width: 700px) {
+    .t-calc-full-minus-50px{
+        top: calc(100% - 50px);
+    }
+    .t-calc-full-minus-350px{
+        top: calc(100% - 350px);
+    }
+    .t-calc-full-minus-310px{
+        top: calc(100% - 310px);
+    }
+    .ani-show-buttom-win{
+        left: 0 !important;
+        animation: 0.35s showBottomWindow;
+    }
+    .ani-show-search{
+        animation: 0.3s showSearch;
+    }
+}
+//TailwindCSS辅助内容
+
+.t-calc-50-minus-50px-2{
+    top: calc(50% - 50px);
+}
+
+.left-calc-50-minus-150px{
+    left: calc(50% - 150px);
+}
+
+.ani-\[loading-alert\]-4{
+    color: white;
+    animation: 0.4s loadingAlert;
+}
+
+.b-calc-50-minus-180px {
+    bottom: calc(50% - 180px);
+}
+
+.l-calc-100-minus-400{
+    left: calc(100% - 400px);
+}
+
+.ani-show-panel{
+    animation: 0.4s showLeftPanel;
+}
+.ani-show-common-panel{
+    animation: 0.4s showLeftPanel;
+}
+
+// 搜索信息的高度设置，电脑版默认左侧高度，手机版为下方300px
+
+@media (max-width: 700px) {
+    .search-panel{
+        top: calc(100% - 350px);
+        height: 300px;
+    }
+    .search-calc-height{
+        height: calc(300px - 15px);
+    }
+    .ani-show-panel{
+        animation: 0.4s showLeftPanelFromBottom;
+    }
+}
+
+//正常窗口的高度设置,300px
+
+.common-window-height{
+    height: calc(100% - 75px);
+}
+
+@media (max-width: 700px) {
+    .common-panel{
+        .common-window-height{
+            height: calc(100% - 90px);
+        }
+        &[zoom-max = 'true'] .common-window-height{
+            height: calc(100% - 100px);
+        }
+    }
+    
+}
+
+@media (max-width: 700px) {
+    .common-panel{
+        top: calc(55% - 50px);
+        height: 45%;
+    }
+    .common-calc-height{
+        height: calc(300px - 15px);
+    }
+    .ani-show-common-panel{
+        animation: 0.4s showCommonPanelFromBottom;
+    }
+}
+
+.width-calc-notam{
+    width: calc(20rem - 1.5rem - 30px - 10px);
+}
+.flight-window-height{
+    height: calc(100% - 40px);
+}
+@media (max-width: 700px) {
+    .width-calc-notam{
+        width: calc(100% - 1.5rem - 30px - 10px);
+    }
+    .flight-window-height{
+        height: calc(100% - 65px);
+    }
+}
+
+//详细chart-viewer的宽高数据，分为电脑端和手机端两种屏幕适配
+//其中电脑端分为左侧列表是否展开的情况
+
+.viewer-left-calc-1{
+    left:calc(20rem + 50px);
+    width: calc(100% - 20rem - 50px);
+    &[aria-braillelabel = closed]{
+        //列表关闭
+        left: 50px;
+        width: calc(100% - 50px);
+    }
+}
+
+.no-point-alert{
+    left: calc(50% - 200px);
+}
+
+@media (max-width: 700px){
+    .viewer-left-calc-1{
+        width: 100% !important;
+        left: 0 !important;
+    }
+    .width-calc-left{
+        left: 0 !important;
+    }
+    .ownship-panel{
+        animation: showTopOwnship 0.4s;
+    }
+    .no-point-alert{
+        width: 80%;
+        left: 10%;
+    }
+    .data-management{
+        left: 5%;
+    }
+}
+
+.width-calc-left{
+    left: calc(50px + 20rem);
+}
+
+/* mapbox设置 */
+
+.mapboxgl-ctrl-logo {
+    position: relative;
+    left: 50px;
+    display: none !important;
+}
+.mapboxgl-ctrl-top-right{
+    top: 60px !important;
+    user-select: none;
+}
+.mapboxgl-ctrl-bottom-right{
+    user-select: none;
+}
+.mapboxgl-ctrl.mapboxgl-ctrl-attrib:last-child{
+    display: none !important;
+}
+.mapboxgl-ctrl-attrib-inner a{
+    display: none !important;
+}
+.mapboxgl-ctrl-top-right{
+    position: relative;
+    top: 90px !important;
+}
+
+// 航路图右侧筛选框
+.filter-item {
+    background-color: #778899;
+    transition-duration: 0.35s;
+    cursor: pointer;
+    &:hover{
+        background-color: #4f6071;
+    }
+    &.active {
+        background-color: #3CB371;
+        &:hover{
+            background-color: #2e8152;
+        }
+    }
+}
+
+// 顶部航路效果
+.route-top-menu{
+    .airport{
+        background-color: #e75e0f;
+        &:hover{
+            background-color: #c5510e;
+        }
+    }
+    .sid{
+        background-color: rgb(211,163,64);
+        &:hover{
+            background-color: rgb(165, 127, 50);
+        }
+    }
+    .star{
+        background-color: rgb(56, 189, 175);
+        &:hover{
+            background-color: rgb(50, 161, 150);
+        }
+    }
+    .awy{
+        background-color: rgb(219,112,147);
+        &:hover{
+            background-color: rgb(180, 94, 123);
+        }
+    }
+    .vor{
+        background-color: rgb(104,195,63);
+        &:hover{
+            background-color: rgb(82, 151, 50);
+        }
+    }
+    .ndb{
+        background-color: #1dbe7b;
+        &:hover{
+            background-color: #168f5c;
+        }
+    }
+    .waypoint{
+        background-color: rgb(101,167,230);
+        &:hover{
+            background-color: rgb(88, 145, 199);
+        }
+    }
+}
+
+.create-flight .inner-box, .edit-simbrief .inner-box{
+    animation: loadingPopUp 0.28s;
+}
+
+.app-selection-pill{
+    &[aria-description = 'ILS']{
+        background-color:#1dbe7b;
+    }
+    &[aria-description = 'NDB']{
+        background-color:#2aa0a0;
+    }
+    &[aria-description = 'LOC']{
+        background-color:#6fa5c7;
+    }
+    &[aria-description = 'GPS']{
+        background-color:#99d22f;
+    }
+    &[aria-description = 'TACAN']{
+        background-color:#dee42f;
+    }
+    &[aria-description = 'GLS']{
+        background-color:#1d76db;
+    }
+    &[aria-description = 'VOR']{
+        background-color:#0ca3d1;
+    }
+    &[aria-description = 'RNP']{
+        background-color:#e7a32f;
+    }
+    &[aria-description = 'PROC']{
+        background-color:#b938f4;
+    }
+}
+
+.flight-link-status{
+    font-size: 13px;
+    color: white;
+    .connected{
+        background-color: #11bd45;
+    }
+    .disconnected{
+        background-color: rgb(252, 113, 63);
+    }
+}
+
+.flight-main-panel-border{
+    position: relative;
+    margin-left: 15px;
+    width: calc(100% - 30px);
+}
+
+.weather-pill-info{
+    span{
+        display: inline-block !important;
+    }
+}
+
+.ownship-panel{
+    animation: showGradually 0.25s;
+}
+
+.pinboard-item:hover{
+    .action-item{
+        display: block;
+    }
+}
+
+.login-container{
+    top: 150px;
+    height: calc(100% - 2*$top - 60px);
+}
+
+@media (max-width: 500px){
+    .mapboxgl-ctrl-top-right{
+        left: calc(45px - 100%);
+    }
+    .mapboxgl-ctrl-bottom-right{
+        display: none;
+    }
+}
+
+.manually-picker{
+    position: absolute;
+    top: calc(50% - 65px);
+}
+
+// jeppesen组件的左侧按钮颜色调整
+// 默认字体是按对应颜色来的；点击后字体颜色变为白色，背景变为对应颜色
+.jeppesen-chart-panel{
+    .ant-tabs-tab{
+        margin-top: 5px;
+        &[data-node-key='1']{
+            color: rgb(255,165,0);
+        }
+        &[data-node-key='2']{
+            color: rgb(64,224,208);
+        }
+        &[data-node-key='3']{
+            color: rgb(255,105,180);
+        }
+        &[data-node-key='4']{
+            color: rgb(50,205,50);
+        }
+        &[data-node-key='5']{
+            color: rgb(250,128,114);
+        }
+    }
+    .ant-tabs-tab.ant-tabs-tab-active{
+        &[data-node-key='1']{
+            color: white;
+            background-color: rgb(199, 130, 3) !important;
+        }
+        &[data-node-key='2']{
+            color: white;
+            background-color: rgb(63, 197, 184) !important;
+        }
+        &[data-node-key='3']{
+            color: white;
+            background-color: rgb(209, 90, 150) !important;
+        }
+        &[data-node-key='4']{
+            color: white;
+            background-color: rgb(40, 168, 40) !important;
+        }
+        &[data-node-key='5']{
+            color: white;
+            background-color: rgb(207, 108, 97) !important;
+        }
+    }
+}
+
+
+//edit-mode下，其中可编辑的元素为editable-element，移除元素按钮为remove-button
+.edit-mode{
+    .editable-element{
+        .remove-button{
+            animation: showGradually 0.3s;
+            display: none !important;
+        }
+        &:hover{
+            .remove-button{
+                display: flex !important;
+            }
+        }
+    }
+}
+.edit-mode-enable{
+    background-color: rgb(235,77,154);
+    &:hover{
+        background-color: rgb(218,47,120);
+    }
+}
+.edit-mode-exit{
+    background-color: rgb(33,196,93);
+    &:hover{
+        background-color: rgb(21,162,73);
+    }
+}
+
+.aip-charts[chart-state = 'open'], .jepp-charts[chart-state = 'open']{
+    border-left: 5px solid orange;
+}
+
+// 默认滚动条效果
+::-webkit-scrollbar-button {
+    display: none;
+}
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: rgba(255,255,255, 0.15);
+    transition-duration: 0.4s;
+    cursor: pointer;
+    
+}
+::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    background-color: rgba(255,255,255, 0.265);
+    border-radius: 5px;
+    &:hover{
+        width: 9px;
+    }
+}
+

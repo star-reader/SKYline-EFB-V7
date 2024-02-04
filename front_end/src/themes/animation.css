@@ -1,0 +1,75 @@
+@keyframes loadingAlert {
+    0%{
+        opacity: 0.2;
+        transform: scale(0.15);
+    }
+    86%{
+        opacity: 0.88;
+        transform: scale(1.24);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes showBottomWindow {
+    0%{
+        top: 100%;
+    }
+}
+
+@keyframes showSearch {
+    0%{
+        width: 0px;
+    }
+    100%{
+        width: 160px;
+    }
+}
+
+@keyframes showLeftPanel {
+    0%{
+        left: -300px;
+    }
+}
+
+@keyframes showLeftPanelFromBottom {
+    0%{
+        top: calc(100% + 400px);
+    }
+}
+
+@keyframes showCommonPanelFromBottom {
+    0%{
+        top: calc(100% + 500px);
+    }
+}
+
+@keyframes topDrop {
+    0%{
+        top: 0px;
+    }
+}
+
+@keyframes loadingPopUp {
+    0%{
+        opacity: 0.2;
+        transform: scale(0.4);
+    }
+}
+
+@keyframes showTopOwnship {
+    0%{
+        top: -300px;
+    }
+}
+
+@keyframes showGradually {
+    0%{
+        opacity: 0.2;
+    }
+    100%{
+        opacity: 1;
+    }
+}
